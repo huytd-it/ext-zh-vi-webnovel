@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cài đặt · Novel Local</title><link rel="stylesheet" href="style.css"></head><body class="options">
+<!-- THESIS: Một bàn điều khiển local minh bạch. OWN-WORLD: Phiếu Windows xanh xám và cobalt.
+STORY: Ghép nối, tải có xác nhận, quản lý thuật ngữ. FIRST VIEWPORT: Kết nối trước model và glossary.
+FORM: Candidate 4; seed 4f51dcca.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+<header><h1>Cài đặt Novel Local</h1><p class="muted">Model chạy trên máy. Nội dung trang không được gửi lên dịch vụ dịch trực tuyến.</p></header>
+<p id="notice" class="notice" role="status" aria-live="polite"></p>
+<section><h2>Kết nối local</h2><p>Mở Novel Local bằng shortcut Windows. Chọn “Thông tin ghép nối” ở biểu tượng khay để lấy mã.</p>
+<label for="token">Mã ghép nối</label><div class="row"><input id="token" type="password" autocomplete="off" spellcheck="false"><button id="connect" class="primary">Lưu &amp; kết nối</button></div><p id="health" class="muted">Chưa kiểm tra kết nối</p></section>
+<section class="section"><h2>Model trên máy</h2><p class="muted">Chỉ tải sau khi bạn xác nhận dung lượng. Sau khi tải xong có thể dịch offline.</p><div id="models"></div><div id="download-confirm" class="confirm" hidden><p id="download-detail"></p><div class="actions"><button id="confirm-download" class="primary">Xác nhận tải</button><button id="cancel-download">Hủy</button></div></div></section>
+<section class="section"><h2>Bộ thuật ngữ</h2><p class="muted">Chọn bộ theo truyện trong popup. Thay đổi chỉ áp dụng từ lượt Dịch lại tiếp theo.</p>
+<label for="sets">Bộ đang sửa</label><div class="row"><select id="sets"><option value="">Tạo bộ mới</option></select><button id="new-set">Tạo mới</button></div>
+<label for="set-name">Tên bộ</label><input id="set-name" maxlength="100" placeholder="Ví dụ: Tên nhân vật của truyện">
+<div class="table-wrap"><table><thead><tr><th scope="col">Chữ Trung</th><th scope="col">Bản Việt</th><th scope="col">Bật</th><th scope="col">Thao tác</th></tr></thead><tbody id="entries"></tbody></table></div>
+<button id="add-entry">Thêm thuật ngữ</button><div class="actions"><button id="save-set" class="primary">Lưu bộ thuật ngữ</button><button id="delete-set" class="danger">Xóa bộ</button></div></section>
+<section class="section"><h2>Cache bản dịch</h2><p class="muted">Giới hạn tạm thời 128 MiB dữ liệu kết quả; mục ít dùng được loại trước. Xóa cache không xóa glossary hoặc model.</p><button id="clear-cache" class="danger">Xóa cache bản dịch</button></section>
+<footer><p>HachimiMT-60 · ngocdang83 · CC BY 4.0<br>MoxhiMT-60 · DanVP · Apache 2.0<br>HirashibaMT-Medium: chưa xác minh giấy phép, chưa cho phép tải/phân phối.</p><p class="muted">Không tải từ URL tùy ý · API 127.0.0.1:17865 · Không tự chạy cùng Windows</p></footer>
+<script src="options.js"></script></body></html>

@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Novel Local · Trung → Việt",
+  "version": "0.1.0",
+  "minimum_chrome_version": "120",
+  "description": "Dịch web novel Trung sang Việt bằng model trên máy của bạn.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": ["http://127.0.0.1/*"],
+  "background": {"service_worker": "background.js"},
+  "action": {"default_popup": "ui/popup.html"},
+  "options_page": "ui/options.html",
+  "content_security_policy": {"extension_pages": "script-src 'self'; object-src 'none'; connect-src http://127.0.0.1:17865"}
+}

@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Novel Local</title><link rel="stylesheet" href="style.css"></head>
+<body class="popup">
+<!-- THESIS: Công cụ dịch tại chỗ; trạng thái và hành động trước trang trí.
+OWN-WORLD: Phiếu điều khiển bản dịch, nền xám xanh, mực xanh đậm, nút cobalt, Segoe UI.
+STORY: Ghép nối, chọn model/glossary, dịch và phục hồi trang.
+FIRST VIEWPORT: Tên, kết nối, cấu hình, tiến độ và nút Dịch ở một cột 368px.
+FORM: Candidate 4: bảng điều khiển tiện ích Windows; seed 4f51dcca.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md -->
+<header><h1>Novel Local</h1><p class="muted">Dịch Trung → Việt trên máy của bạn</p></header>
+<p id="connection" role="status">Đang kiểm tra dịch vụ…</p>
+<label for="model">Model</label><select id="model"><option>HachimiMT-60</option><option>MoxhiMT-60</option><option>HirashibaMT-Medium</option></select>
+<label for="glossary">Bộ thuật ngữ</label><select id="glossary"><option value="">Không dùng</option></select>
+<label for="device">Thiết bị yêu cầu</label><select id="device"><option value="cpu">CPU</option><option value="cuda">NVIDIA GPU · CUDA</option></select>
+<p id="changed" class="muted" hidden>Cấu hình mới chỉ áp dụng khi bấm Dịch lại.</p>
+<div class="status" aria-live="polite"><strong id="state">Chưa bắt đầu dịch</strong><p id="progress">0 / 0 đoạn</p><progress id="bar" value="0" max="1" aria-label="Số đoạn đã dịch"></progress><p id="snapshot" class="muted"></p></div>
+<p id="notice" class="notice" role="alert"></p>
+<button id="translate" class="primary wide">Dịch trang này</button>
+<div class="actions"><button id="retry">Dịch lại</button><button id="toggle">Xem gốc</button><button id="stop">Dừng</button></div>
+<footer><a href="options.html" id="settings">Cài đặt, model &amp; glossary</a></footer>
+<script src="popup.js"></script></body></html>

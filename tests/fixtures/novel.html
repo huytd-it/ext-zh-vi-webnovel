@@ -1,0 +1,15 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>小说测试 · fixture</title>
+<style>body{max-width:720px;margin:32px auto;padding:0 20px;font:20px/1.8 system-ui}nav{display:flex;gap:24px}input,button{font:inherit}pre{background:#eee}article p{margin:32px 0}</style></head><body>
+<nav><a href="#chapter">目录</a><button id="next">下一章</button><a href="https://example.com" id="external">帮助</a></nav>
+<h1 id="chapter">第一章：青山之外</h1><p>Hello world · Tiếng Việt · 中文混合</p>
+<article id="novel"><p>他走进<b>青山</b>，看见<i>远方的朋友</i>。他笑着说：“你好！”</p><p>前往<a href="#chapter">山门</a>，然后继续向前。<br>新的一行，不应该丢失。</p></article>
+<ul><li>修炼</li><li>朋友</li></ul><table><tr><th>名字</th><th>门派</th></tr><tr><td>张三</td><td>青山宗</td></tr></table>
+<label>搜索 <input value="输入不要改变"></label><textarea>不要翻译</textarea><div contenteditable="true">这里可以编辑</div><pre><code>const 名字 = '不要翻译';</code></pre>
+<button id="lazy">加载更多</button><output id="clicks">0</output>
+<script>
+const novel=document.querySelector('#novel');
+for(let n=0;n<100;n++){const p=document.createElement('p');p.textContent=`第${n+1}段：张三走过山门，清风拂面。他知道新的旅程已经开始。`;novel.append(p);}
+document.querySelector('#lazy').onclick=()=>{const p=document.createElement('p');p.textContent='新加载的章节内容，应该继续翻译。';novel.append(p);};
+document.querySelector('#next').onclick=()=>{history.pushState({},'', '?chapter='+Date.now());document.querySelector('h1').textContent='第二章：新的开始';};
+let clicks=0;document.querySelector('#external').addEventListener('click',()=>document.querySelector('#clicks').textContent=String(++clicks));
+</script></body></html>

@@ -1,0 +1,17 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+build/
+*.egg-info/
+artifacts/
+.ruff_cache/
+.env
+.env.*
+!.env.example
+connection.json
+*.sqlite3
+*.sqlite3-*
+artifacts-*.json
